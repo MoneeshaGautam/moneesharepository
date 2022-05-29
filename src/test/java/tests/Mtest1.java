@@ -34,6 +34,18 @@ public class Mtest1 {
 		System.out.println(x1);
 		String y= driver.getCurrentUrl();
 		System.out.println(y);
+		driver.close();
+	//changes by tester
+		RemoteWebDriver driver1 = new ChromeDriver();
+		
+		WebDriverManager.chromedriver().setup();
+		driver1.get("Http://www.facebook.com");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//button[contains(text(),'Allow essential ')]")).click();
+		driver.close();
+		
+		
+	
 	}
 
 }
